@@ -1,0 +1,5 @@
+BeautifulSoup
+socketio
+server
+aiohttp
+requests
