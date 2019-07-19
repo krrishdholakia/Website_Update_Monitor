@@ -34,8 +34,7 @@ def tempfunc():
     response = requests.get(url, headers=headers)
 
     soup = BeautifulSoup(response.text, "lxml")
-
-    reddit_comment = soup.find('div', {"class": "s1p8ey0o-0 WffKZ"}).getText()
+    reddit_comment = soup.find('div', {"class": "_a5_x7qimk18YbGSwE8Fy"}).getText()
     print ("reddit_Comment: ", reddit_comment)
     return reddit_comment
 
@@ -55,6 +54,7 @@ async def print_message(sid, message):
         # print ("reddit_comment_post_insert: ", reddit_comment_insert)
         new_comment = tempfunc()
         returnStr = ""
+        print("old_comment: {}".format(old_comment))
         if old_comment == new_comment :
             returnStr = "nothing has changed"
         else: 
