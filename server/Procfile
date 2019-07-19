@@ -1,2 +1,2 @@
-web: python3 tester.py
+web: python3.7 tester.py
 runtime.txt
