@@ -6,10 +6,11 @@ chrome.runtime.onInstalled.addListener(function() {
 
   chrome.extension.onConnect.addListener(function(port) {
     console.log("Connected .....");
+    // const socket = io("https://radiant-wave-36300.herokuapp.com/");
     const socket = io("http://localhost:8080");
     console.log("button clicked!");
     socket.emit("message", "HELLO WORLD from background.js");
-    socket.on("message", function(data) {
+    socket.on("time", function(data) {
       var today = new Date();
       var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
       console.log(data);
